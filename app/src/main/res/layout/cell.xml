@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutCell">
+
+    <EditText
+        android:id="@+id/etCell"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:hint="@string/cell_hint"
+        android:inputType="number"
+        android:singleLine="false"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/cell_line_thickness"
+        android:id="@+id/bottomLine"
+        app:layout_constraintTop_toBottomOf="@id/etCell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/cell_line_color_normal"
+        android:visibility="visible"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/cell_line_thickness"
+        android:id="@+id/topLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etCell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/cell_line_color_normal"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="@dimen/cell_line_thickness"
+        android:layout_height="0dp"
+        android:id="@+id/startLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/etCell"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/cell_line_color_normal"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="@dimen/cell_line_thickness"
+        android:layout_height="0dp"
+        android:id="@+id/endLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCell"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/cell_line_color_normal"
+        android:visibility="visible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
